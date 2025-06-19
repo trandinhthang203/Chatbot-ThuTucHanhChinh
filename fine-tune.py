@@ -6,7 +6,7 @@ from trl import SFTTrainer
 from huggingface_hub import create_repo
 from huggingface_hub import HfApi, login
 
-wandb.login(key = '9d05c91ee21401a2892317a53c58683e1c87ff64')
+wandb.login(key = '')
 run = wandb.init(
     project='Fine tuning mistral 7B',
     job_type="training",
@@ -98,7 +98,7 @@ trainer = Trainer(
 
 trainer.train()
 
-login(token="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")
+login(token="HF_TOKEN")
 api = HfApi()
 api.create_repo(repo_id="Mistral-7b-HanhChinh", private=True)
 
